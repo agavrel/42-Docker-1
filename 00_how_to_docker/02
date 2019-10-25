@@ -1,0 +1,2 @@
+docker-machine ip Char # https://devilbox.readthedocs.io/en/latest/howto/docker-toolbox/find-docker-toolbox-ip-address.html
+# docker-machine env Char | grep 'HOST'

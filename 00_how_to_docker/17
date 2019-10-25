@@ -1,0 +1,1 @@
+docker ps --filter 'status=running' # display active containers

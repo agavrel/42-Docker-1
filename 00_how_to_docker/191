@@ -1,0 +1,12 @@
+docker run --name Abathur -dt -p 3000:3000 -v ~/Abathur:/root/app python:2-slim
+docker exec Abathur apt-get update -y
+docker exec Abathur apt-get install python-pip python-dev build-essential -y
+docker exec Abathur pip install flask
+docker exec Abathur touch /root/app.py
+docker exec Abathur echo -e \"from flask import Flask
+\napp = Flask\(__name__\)
+\n\@app.route\(\'\/\'\)
+\ndef hello_world():
+\n\treturn '<h1>Hello World</h1>' >> /root/app.py\"
+docker exec Abathur export FLASK_APP='/root/app.py'
+docker exec Abathur flask run -h 0.0.0.0 -p 3000

@@ -1,0 +1,2 @@
+docker volume ls
+# list docker volumes on cpu

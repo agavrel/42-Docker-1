@@ -1,0 +1,2 @@
+eval $(docker-machine env Char) # docker-machine env Char
+# docker ps

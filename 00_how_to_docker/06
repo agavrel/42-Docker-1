@@ -1,0 +1,4 @@
+docker run -d -p 5000:80 --name overlord --restart always nginx # https://docs.docker.com/engine/reference/run/
+# When starting a Docker container, you must first decide if you want to run the container in the background in a “detached” mode or in the default foreground mode:
+# The -P option publishes all the ports to the host interfaces. Docker binds each exposed port to a random port on the host. The range of ports are within an ephemeral port range defined by /proc/sys/net/ipv4/ip_local_port_range. Use the -p flag to explicitly map a single port or range of ports.
+# test: http://<ip-de-char>:5000 c
