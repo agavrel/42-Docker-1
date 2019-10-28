@@ -6,7 +6,7 @@ read input
 DAY="$(date -d $input +'%s')" # user epoch input
 TODAY="$(date -d 'now' +'%s')" # today's epoch
 
-DIFF="$(( $(($TODAY - $DAY)) / (3600*24) ))" # https://stackoverflow.com/questions/4946785/how-to-find-the-difference-in-days-between-two-dates
+DIFF=$(( $(($TODAY-$DAY)) / (3600*24) )) # https://stackoverflow.com/questions/4946785/how-to-find-the-difference-in-days-between-two-dates
 
 echo -e "\e[34mThank you!" # https://misc.flogisoft.com/bash/tip_colors_and_formatting
 
